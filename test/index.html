@@ -21,7 +21,39 @@
 <body>
 
     <div class="container" id="app">
+        <h1 class="col-12 text-center py-2">Product Database</h1>
+        <form class="row g-3 my-5">
+            <div class="col-4">
+              <label for="inputName" class="form-label">Name</label>
+              <input type="name" class="form-control" placeholder="Product's Name" v-model="name">
+            </div>
+            <div class="col-4">
+              <label for="inputGenre" class="form-label">Brand</label>
+              <input type="brand" class="form-control" placeholder="Product's Brand" v-model="brand">
+            </div>
+            <div class="col-4">
+              <label for="inputYear" class="form-label">Price</label>
+              <input type="price" class="form-control" placeholder="Product's Price" v-model="price">
+            </div>
+            <div class="col-12 text-center">
+                <label for="inputYear" class="form-label">Description</label>
+                <input type="description" class="form-control" placeholder="Product's Description" v-model="description">
+            </div>
+            <div class="col-6 gap-2 d-grid py-2 mx-auto">
+              <button type="submit" class="btn btn-primary" @click="saveProduct()">Save Product</button>
+            </div>
+          </form>
 
+          <ul class="list-group">
+            <li class="list-group-item" v-for="(item, index) in items" :key="index">
+                <ul>
+                    <li><h2>Name: {{item.name}}</h2></li>
+                    <li><p>Brand: {{item.brand}}</p></li>
+                    <li><p>Price: {{item.price}} €</p></li>
+                    <li><p>Description: {{item.description}}</p></li>
+                </ul>
+            </li>
+        </ul>
     </div>
 
     <script src="app.js"></script>

@@ -1,3 +1,20 @@
 [
-    
+    {
+        "name": "GastroIntestinal",
+        "brand": "Royal Canin",
+        "price": "60",
+        "description": "Crocchette per cani"
+    },
+    {
+        "name": "Osso di plastica",
+        "brand": "Joe's Zampetti",
+        "price": "10",
+        "description": "Osso di plastica per cani"
+    },
+    {
+        "name": "Dog Kennel",
+        "brand": "William Walker",
+        "price": "30",
+        "description": "Cuccia per cani"
+    }
 ]
