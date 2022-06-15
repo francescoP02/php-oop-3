@@ -34,7 +34,7 @@ $dogkennel = new AnimalProduct("William Walker", "Dog Kennel", "30", "Cuccia per
 
 // creiamo un utente
 
-$francesco = new User("Francesco", "francesco@email.com", 1234567843218765, false);
+$francesco = new User("Francesco", "francesco@email.com", 1234567843218765, '04/24', 123);
 
 // registriamo l'utente
 echo $francesco->register();
@@ -64,7 +64,7 @@ if ($result) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP OOP 2</title>
+    <title>PHP OOP 3</title>
 </head>
 <body>
 
@@ -86,7 +86,7 @@ if ($result) {
     
     <p>
         <?php
-        if ($francesco->canPurchase()) {
+        if ($francesco->isValid()) {
             echo "La tua carta è valida. Puoi procedere all'acquisto";
         }
         else {

@@ -1,19 +1,25 @@
 <?php
 
+require_once __DIR__ ."/CreditCard.php";
+
 class User {
+
+    use CreditCard;
 
     public $name;
     public $email;
-    public $credit_card_number;
-    public $credit_card_expired;
+    public $card_number;
+    public $expiration;
+    public $cvc;
     public $cart = [];
     public $registered = false;
 
-    function __construct($_name, $_email, $_credit_card_number, $_credit_card_expired) {
+    function __construct($_name, $_email, $_card_number, $_expiration, $_cvc) {
         $this->name = $_name;
         $this->email = $_email;
-        $this->credit_card_number = $_credit_card_number;
-        $this->credit_card_expired = $_credit_card_expired;
+        $this->card_number = $_card_number;
+        $this->expiration = $_expiration;
+        $this->cvc = $_cvc;
     }
 
     function addProductToCart($_product) {
@@ -42,8 +48,5 @@ class User {
         else {
         return $total_price;
         }
-    }
-    function canPurchase() {
-        return !$this->credit_card_expired;
     }
 }
