@@ -25,9 +25,8 @@ class User {
     function addProductToCart($_product) {
         if ($_product->in_stock) {
             $this->cart[] = $_product;
-            return true;
         } else {
-            return false;
+            throw new Exception($_product->name . " " . "non è disponibile");
         }
     }
 

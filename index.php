@@ -48,13 +48,17 @@ var_dump($francesco);
 // rendiamo un prodotto non disponibile
 $plastic_bone->in_stock = false;
 
-$result = $francesco->addProductToCart($plastic_bone);
-if ($result) {
-    echo "<p>Osso Plastica aggiunto</p>";
-} else {
-    echo "<p>Osso Plastica non è più disponibile</p>";
+// $result = $francesco->addProductToCart($plastic_bone);
+// if ($result) {
+//     echo "<p>Osso Plastica aggiunto</p>";
+// } else {
+//     echo "<p>Osso Plastica non è più disponibile</p>";
+// }
+try {
+    $francesco->addProductToCart($plastic_bone);
+} catch (\Exception $e) {
+    echo "<p>" . $e->getMessage() ."</p>";
 }
-
 ?>
 
 
