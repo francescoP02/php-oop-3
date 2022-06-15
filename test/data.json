@@ -1,20 +1,27 @@
 [
     {
-        "name": "GastroIntestinal",
-        "brand": "Royal Canin",
-        "price": "60",
-        "description": "Crocchette per cani"
-    },
-    {
-        "name": "Osso di plastica",
-        "brand": "Joe's Zampetti",
-        "price": "10",
-        "description": "Osso di plastica per cani"
-    },
-    {
+        "pet_type": "Tutte le et\u00e0",
         "name": "Dog Kennel",
         "brand": "William Walker",
         "price": "30",
-        "description": "Cuccia per cani"
+        "description": "Cuccia per cani",
+        "type": "toy"
+    },
+    {
+        "weight": "1000",
+        "animal_year": "3 anni",
+        "name": "Gastrointestinal",
+        "brand": "Royal Canin",
+        "price": "60",
+        "description": "Croccantini per cani",
+        "type": "food"
+    },
+    {
+        "pet_type": "1 anno",
+        "name": "Osso di plastica",
+        "brand": "Joe's Zampetti",
+        "price": "10",
+        "description": "Osso di plastica per cani",
+        "type": "toy"
     }
 ]

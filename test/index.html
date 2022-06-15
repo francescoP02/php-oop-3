@@ -39,6 +39,25 @@
                 <label for="inputYear" class="form-label">Description</label>
                 <input type="description" class="form-control" placeholder="Product's Description" v-model="description">
             </div>
+            <span class="col-12">Product Type:</span>
+            <select class="form-select" aria-label="Default select example" v-model="type">
+                <option selected>Open this select menu</option>
+                <option value="toy">Toy</option>
+                <option value="food">Food</option>
+            </select>
+
+            <div v-if="type == 'toy'" class="col-12">
+                <label for="inputPetType" class="form-label">Made for:</label>
+                <input type="pet_type" class="form-control" placeholder="Pet's Type" v-model="pet_type">
+            </div>
+            <div v-if="type == 'food'" class="col-12">
+                <label for="inputAnimalYear" class="form-label">Made for animal till:</label>
+                <input type="animal_year" class="form-control" placeholder="Animal's Year" v-model="animal_year">
+            </div>
+            <div v-if="type == 'food'" class="col-12">
+                <label for="inputWeight" class="form-label">Weight:</label>
+                <input type="weight" class="form-control" placeholder="Product's Weight" v-model="weight">
+            </div>
             <div class="col-6 gap-2 d-grid py-2 mx-auto">
               <button type="submit" class="btn btn-primary" @click="saveProduct()">Save Product</button>
             </div>
@@ -51,6 +70,9 @@
                     <li><p>Brand: {{item.brand}}</p></li>
                     <li><p>Price: {{item.price}} €</p></li>
                     <li><p>Description: {{item.description}}</p></li>
+                    <li v-if="item.pet_type !== '' "><p>Adatto per: {{item.pet_type}}</p></li>
+                    <li v-if="item.weight !== '' "><p>Peso: {{item.weight}} g</p></li>
+                    <li v-if="item.animal_year !== '' "><p>Adatto per animali fino a: {{item.animal_year}}</p></li>
                 </ul>
             </li>
         </ul>
